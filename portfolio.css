@@ -1,0 +1,502 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans",Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100vh;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.container > .section:nth-child(2), .section:nth-child(3) {
+    background-color: rgb(50,50,50);
+    color: white;
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+    background-color: white;
+    color: black;
+}
+
+.nav-bar {
+    grid-column: 1/4;
+    grid-row: 1;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 20px;
+}
+
+.links > a {
+    margin: 10px;
+    font-size: 1.2rem;
+    color: white; 
+}
+
+.landing {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 7fr;
+}
+
+.intro {
+    grid-column: 1/4;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.myself {
+    text-align: center;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.myself > .name {
+    flex: 1;
+    font-size: 4rem;
+}
+
+.myself > .description {
+    flex: 1;
+    font-family: "Lora";
+    font-size: 1rem;
+}
+
+.myself > .skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    margin-top: 120px;
+}
+
+.myself > .skills > .skill-text > .skill {
+    transition: all;
+    transition-duration: 2s;
+    margin: 20px;
+    font-size: 5rem;
+}
+
+.myself > .skills > .skill-text > .skill-django {
+    transition: all;
+    transition-duration: 2s;
+    width: 6rem;
+    height: 6rem;
+    margin: 20px auto;
+}
+
+.myself > .skills > .skill-text > .skill-express {
+    transition: all;
+    transition-duration: 2s;
+    width: 4rem;
+    height: 2.5rem;
+    margin: auto;
+}
+
+.myself > .skills > .skill-text > p {
+    opacity: 0; 
+    transition: all;
+    transition-duration: 2s;
+    margin-top: 5px;
+}
+
+.myself > .skills > .skill-text > .text-express {
+    position: relative;
+    top: 30px;
+}
+
+.scaling {
+    transform: scale(1.5);
+}
+
+.myself > .skills > .skill-text > p.skill-text-visible {
+    opacity: 1;
+}
+
+.intro-projects {
+    position: relative;
+    top: 12vh;
+    font-size: 1.2rem;
+}
+
+.intro-projects a{
+    color: black;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 8fr 1fr 8fr 1fr;
+}
+
+.project-container {
+    background-color: white;
+    color: black;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 10px 0px 100px rgb(255,255,255,0.25);
+}
+
+.project-container > .project-image {
+    flex: 2;
+    width: 30%;
+}
+
+.project-container > .project-description {
+    flex: 3;
+    padding: 20px;
+    padding-left: 40px;
+}
+
+.project-description > .title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    font-weight: 575;
+    font-family: "Lora";
+    margin-top: 10px;
+}
+
+img[src="./neural_network.png"] {
+    object-fit: cover;
+}
+
+.project-description > .description {
+    font-weight: lighter;
+    line-height: 1.5rem;
+}
+
+.project-description > .description > p {
+    color: rgb(46, 119, 255);
+    opacity: 0.7;
+    margin-top: 20px;
+}
+
+.project-description > .description a {
+    color: rgb(46, 119, 255);
+    margin-right: 10px;
+}
+
+#project1 {
+    grid-row: 2/3;
+    grid-column: 2;
+}
+
+#project2 {
+    grid-row: 4/5;
+    grid-column: 2;
+}
+
+#project3 {
+    grid-row: 2/3;
+    grid-column: 2;
+}
+
+#project4 {
+    grid-row: 4/5;
+    grid-column: 2;
+}
+
+.contact {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact > .feedback {
+    flex: 8;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 2fr 3fr;
+}
+
+.feedback > .me {
+    grid-row: 1;
+    grid-column: 2/3;
+    align-self: center;
+}
+
+.me .title {
+    font-size: 2.5rem;
+    font-family: "Lora";
+}
+
+.feedback > .achievement {
+    grid-row: 2;
+    grid-column: 2/3;
+}
+
+.achievement .title {
+    font-size: 2.5rem;
+    font-family: "Lora";
+    margin-bottom: 10px;
+}
+
+.feedback > .achievement .description > ul {
+    position: relative;
+    left: 20px;
+    line-height: 3rem;
+}
+
+.feedback > .me .description > p {
+    position: relative;
+    left: 20px;
+    top: 20px;
+    line-height: 2rem;
+    word-wrap: break-word;
+}
+
+.contact > .contact-me {
+    flex: 1;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons > a > .icon {
+    margin: 20px;
+    font-size: 2rem;
+}
+
+.icons > a > .icon:hover {
+    opacity: 0.5;
+}
+
+@media (max-width: 1200px){
+    .projects {
+        grid-template-columns: 1fr 15fr 1fr;
+        grid-template-rows: 1fr 8fr 1fr 8fr 1fr;
+    }
+
+    .project-description > .title {
+        margin-bottom: 15px;
+    }
+
+    .contact > .feedback {
+        flex: 8;
+        display: grid;
+        grid-template-columns: 1fr 8fr 1fr;
+        grid-template-rows: 2fr 3fr;
+    }
+
+    .feedback > .me {
+        grid-row: 1;
+        grid-column: 2/3;
+        align-self: center;
+        margin-bottom: 40px;
+    }
+
+    .me .title {
+        font-size: 2.5rem;
+        font-family: "Lora";
+        margin-top: 20px;
+    }
+    
+}
+
+@media (max-width: 960px){
+    .projects {
+        grid-template-columns: 1fr 20fr 1fr;
+        grid-template-rows: 1fr 8fr 1fr 8fr 1fr;
+    }
+
+    .project-container {
+        background-color: white;
+        color: black;
+        display: flex;
+        border-radius: 10px;
+        overflow: scroll;
+        box-shadow: 10px 0px 100px rgb(255,255,255,0.25);
+    }
+
+    .project-description > .title {
+        margin-bottom: 25px;
+    }
+
+    .project-container > .project-image {
+        flex: 0;
+        width: 0;
+    }
+    
+    .project-container > .project-description {
+        flex: 3;
+        padding: 20px;
+        padding-left: 40px;
+    } 
+    
+    .contact > .feedback {
+        flex: 8;
+        display: grid;
+        grid-template-columns: 1fr 10fr 1fr;
+        grid-template-rows: 2fr 3fr;
+    }
+    
+}
+
+@media (max-width: 600px){
+
+    .myself {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .myself > .skills {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        margin-top: 120px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr 20fr 1fr;
+        grid-template-rows: 1fr 8fr 1fr 8fr 1fr;
+    }
+
+    .project-description > .title {
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+    }
+
+    .project-container > .project-image {
+        flex: 0;
+        width: 0;
+    }
+    
+    .project-container > .project-description {
+        flex: 3;
+        padding: 20px;
+        padding-left: 40px;
+    }  
+    
+}
+
+@media (max-width: 500px) {
+
+    .myself > .skills > .skill-text > .skill {
+        transition: all;
+        transition-duration: 2s;
+        margin: 20px;
+        font-size: 4rem;
+    }
+    
+    .myself > .skills > .skill-text > .skill-django {
+        transition: all;
+        transition-duration: 2s;
+        width: 5rem;
+        height: 5rem;
+        margin: 20px auto;
+    }
+    
+    .myself > .skills > .skill-text > .skill-express {
+        transition: all;
+        transition-duration: 2s;
+        width: 3rem;
+        height: 1.75rem;
+        margin: auto;
+    }
+    
+    .myself > .skills > .skill-text > p {
+        opacity: 0; 
+        transition: all;
+        transition-duration: 2s;
+        margin-top: 5px;
+    }
+    
+    .myself > .skills > .skill-text > .text-express {
+        position: relative;
+        top: 30px;
+    }    
+    .scaling {
+        transform: scale(1.2);
+    }
+
+    .intro-projects {
+        position: relative;
+        top: 12vh;
+        font-size: 1.2rem;
+    }
+    
+}
+
+@media (max-width: 400px) {
+    body {
+        font-size: 9px;
+    }
+
+    .myself > .skills > .skill-text > .skill {
+        transition: all;
+        transition-duration: 2s;
+        margin: 20px;
+        font-size: 3rem;
+    }
+    
+    .myself > .skills > .skill-text > .skill-django {
+        transition: all;
+        transition-duration: 2s;
+        width: 4rem;
+        height: 4rem;
+        margin: 20px auto;
+    }
+    
+    .myself > .skills > .skill-text > .skill-express {
+        transition: all;
+        transition-duration: 2s;
+        width: 2rem;
+        height: 1.25rem;
+        margin: auto;
+    }
+    
+    .myself > .skills > .skill-text > p {
+        opacity: 0; 
+        transition: all;
+        transition-duration: 2s;
+        margin-top: 5px;
+    }
+    
+    .myself > .skills > .skill-text > .text-express {
+        position: relative;
+        top: 30px;
+    }    
+
+    .scaling {
+        transform: scale(1.2);
+    }
+
+    .intro-projects {
+        position: relative;
+        top: 5vh;
+        font-size: 1.2rem;
+    }
+    
+}
