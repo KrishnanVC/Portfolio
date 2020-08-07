@@ -359,7 +359,10 @@ img[src="./neural_network.png"] {
         grid-template-columns: 1fr 10fr 1fr;
         grid-template-rows: 2fr 3fr;
     }
-    
+
+}
+
+@media (max-width: 700px) {
     .projects {
         display: flex;
         flex-direction: column;
@@ -368,7 +371,6 @@ img[src="./neural_network.png"] {
     .project-container {
         margin: 20px;
     }
-
 }
 
 @media (max-width: 600px){
