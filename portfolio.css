@@ -360,6 +360,15 @@ img[src="./neural_network.png"] {
         grid-template-rows: 2fr 3fr;
     }
     
+    .projects {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-container {
+        margin: 20px;
+    }
+
 }
 
 @media (max-width: 600px){
@@ -384,12 +393,7 @@ img[src="./neural_network.png"] {
     }
 
     .project-container {
-        background-color: white;
-        color: black;
-        display: flex;
         margin: 20px;
-        border-radius: 10px;
-        box-shadow: 10px 0px 100px rgb(255,255,255,0.25);
     }
 
     .project-description > .title {
